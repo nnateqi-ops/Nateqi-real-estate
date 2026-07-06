@@ -17,6 +17,8 @@ window.SITE_DATA = {
       city: 'Manassas',
       state: 'VA',
       zip: '20110',
+      lat: 38.7947,
+      lng: -77.5203,
     },
     photo: 'assets/najiba-nateqi.png',
   },

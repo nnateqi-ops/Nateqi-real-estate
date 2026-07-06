@@ -591,6 +591,45 @@ address {
 
 /* ── Listings ──────────────────────────────────────────────────────────── */
 
+.map-container {
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  background: var(--color-bg-alt);
+}
+
+.map-container .leaflet-container {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-body);
+}
+
+.contact-map {
+  margin-top: var(--space-md);
+}
+
+.map-info {
+  padding: 0.25rem 0;
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+.map-info__title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--color-charcoal);
+  margin-bottom: 0.25rem;
+}
+
+.map-info__address {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
 .listings__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1155,6 +1194,10 @@ address {
   .services__grid,
   .benefits__grid {
     grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    height: 240px;
   }
 
   .form__row--2col {
