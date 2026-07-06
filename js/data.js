@@ -129,7 +129,7 @@ window.SITE_DATA = {
   testimonials: [
     {
       name: 'Michael & Sarah Chen',
-      quote: 'Alexandra made our home search effortless. Her knowledge of the market and calm professionalism gave us complete confidence from day one.',
+      quote: 'Najiba made our home search effortless. Her knowledge of the market and calm professionalism gave us complete confidence from day one.',
       rating: 5,
     },
     {
@@ -139,7 +139,7 @@ window.SITE_DATA = {
     },
     {
       name: 'Jennifer Walsh',
-      quote: 'As a first-time buyer, I felt supported every step of the way. Alexandra explained everything clearly and fought hard for us.',
+      quote: 'As a first-time buyer, I felt supported every step of the way. Najiba explained everything clearly and fought hard for us.',
       rating: 5,
     },
   ],
