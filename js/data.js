@@ -118,18 +118,8 @@ window.SITE_DATA = {
 
   testimonials: [
     {
-      name: 'Michael & Sarah Chen',
-      quote: 'Najiba made our home search effortless. Her knowledge of the market and calm professionalism gave us complete confidence from day one.',
-      rating: 5,
-    },
-    {
-      name: 'David Rodriguez',
-      quote: 'We sold above asking in under two weeks. Her marketing strategy and negotiation skills are truly world-class.',
-      rating: 5,
-    },
-    {
-      name: 'Jennifer Walsh',
-      quote: 'As a first-time buyer, I felt supported every step of the way. Najiba explained everything clearly and fought hard for us.',
+      name: 'Valued Client',
+      quote: 'I had a wonderful experience working with you. You were professional, knowledgeable, and always available to answer my questions throughout the entire home buying process. You made everything smooth and stress free, and I always felt confident that you had my best interests in mind. I truly appreciate your dedication, honesty, and hard work. I highly recommend Najiba to anyone looking to buy or sell a home. Thank you for your outstanding service!',
       rating: 5,
     },
   ],
