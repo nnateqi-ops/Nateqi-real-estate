@@ -46,7 +46,7 @@ window.SITE_DATA = {
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1600566753190-17f0baa42a6e?w=800&q=80',
+      image: 'assets/listings/61st-ave.jpg',
       alt: 'Lovely home in Riverdale, Maryland',
       price: '$475,000',
       address: '5912 61st Ave, Riverdale, MD',
