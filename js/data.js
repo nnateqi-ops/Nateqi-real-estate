@@ -162,5 +162,10 @@ window.SITE_DATA = {
       quote: 'As a first-time buyer, I felt supported every step of the way. Najiba explained everything clearly and fought hard for us.',
       rating: 5,
     },
+    {
+      name: 'Valued Client',
+      quote: 'I had a wonderful experience working with you. You were professional, knowledgeable, and always available to answer my questions throughout the entire home buying process. You made everything smooth and stress free, and I always felt confident that you had my best interests in mind. I truly appreciate your dedication, honesty, and hard work. I highly recommend Najiba to anyone looking to buy or sell a home. Thank you for your outstanding service!',
+      rating: 5,
+    },
   ],
 };
