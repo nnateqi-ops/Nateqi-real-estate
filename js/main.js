@@ -11,13 +11,32 @@
     const grid = document.getElementById('listingsGrid');
     if (!grid || !window.SITE_DATA) return;
 
-    grid.innerHTML = SITE_DATA.listings
+    // Filter only active and pending listings
+    const activeListings = SITE_DATA.listings.filter(
+      listing => listing.status === 'active' || listing.status === 'pending'
+    );
+
+    grid.innerHTML = activeListings
       .map(
-        (listing) => `
+        (listing) => {
+          // Use fallbackImage if mainImage doesn't exist or fails to load
+          const imageUrl = listing.fallbackImage || listing.mainImage;
+          const statusBadge = listing.status === 'pending' 
+            ? '<span class="listing-card__status">Pending</span>' 
+            : '';
+          
+          return `
         <article class="listing-card reveal">
           <div class="listing-card__image-wrap">
-            <img src="${listing.image}" alt="${listing.alt}" class="listing-card__image" loading="lazy" />
+            <img 
+              src="${imageUrl}" 
+              alt="${listing.description}" 
+              class="listing-card__image" 
+              loading="lazy"
+              onerror="this.src='${listing.fallbackImage}'"
+            />
             <span class="listing-card__price">${listing.price}</span>
+            ${statusBadge}
           </div>
           <div class="listing-card__body">
             <p class="listing-card__address">${listing.address}</p>
@@ -29,7 +48,8 @@
             <a href="#contact" class="btn btn--text listing-card__cta">View Details</a>
           </div>
         </article>
-      `
+      `;
+        }
       )
       .join('');
   }
@@ -281,13 +301,142 @@
     });
   }
 
+  // ── Dynamic content updates ────────────────────────────────────────
+
+  function updateDynamicContent() {
+    if (!window.SITE_DATA) return;
+
+    const data = window.SITE_DATA;
+
+    // Update hero section
+    if (data.homepage?.hero) {
+      const hero = data.homepage.hero;
+      const heroEyebrow = document.querySelector('.hero .eyebrow');
+      const heroTitle = document.querySelector('.hero__title');
+      const heroText = document.querySelector('.hero__text');
+      const heroImage = document.querySelector('.hero__image');
+      const heroBadgeLabel = document.querySelector('.hero__badge-label');
+      const heroBadgeValue = document.querySelector('.hero__badge-value');
+
+      if (heroEyebrow) heroEyebrow.textContent = hero.eyebrow;
+      if (heroTitle) heroTitle.textContent = hero.title;
+      if (heroText) heroText.textContent = hero.subtitle;
+      if (heroImage) {
+        heroImage.src = hero.image.url;
+        heroImage.alt = hero.image.alt;
+      }
+      if (heroBadgeLabel) heroBadgeLabel.textContent = hero.badge.label;
+      if (heroBadgeValue) heroBadgeValue.textContent = hero.badge.value;
+
+      // Update stats
+      const stats = document.querySelectorAll('.stat');
+      hero.stats.forEach((stat, i) => {
+        if (stats[i]) {
+          const number = stats[i].querySelector('.stat__number');
+          const label = stats[i].querySelector('.stat__label');
+          if (number) number.textContent = stat.number;
+          if (label) label.textContent = stat.label;
+        }
+      });
+    }
+
+    // Update about section
+    if (data.homepage?.about) {
+      const about = data.homepage.about;
+      const aboutEyebrow = document.querySelector('#about .eyebrow');
+      const aboutTitle = document.querySelector('#about .section__title');
+      const aboutLead = document.querySelector('.about__lead');
+      const aboutText = document.querySelector('.about__text');
+      const aboutImage = document.querySelector('.about__image');
+      const accentNumber = document.querySelector('.about__accent-number');
+      const accentLabel = document.querySelector('.about__accent-label');
+
+      if (aboutEyebrow) aboutEyebrow.textContent = about.eyebrow;
+      if (aboutTitle) aboutTitle.textContent = about.title;
+      if (aboutLead) aboutLead.textContent = about.lead;
+      if (aboutText) aboutText.textContent = about.description;
+      if (aboutImage) {
+        aboutImage.src = about.image.url;
+        aboutImage.alt = about.image.alt;
+      }
+      if (accentNumber) accentNumber.textContent = about.accentCard.number;
+      if (accentLabel) accentLabel.textContent = about.accentCard.label;
+
+      // Update highlights list
+      const highlightsList = document.querySelector('.about__highlights');
+      if (highlightsList) {
+        highlightsList.innerHTML = about.highlights
+          .map(highlight => `<li>${highlight}</li>`)
+          .join('');
+      }
+    }
+
+    // Update contact section
+    if (data.contact && data.address) {
+      const contacts = document.querySelectorAll('.contact__details li a, .footer__links li a');
+      contacts.forEach(link => {
+        if (link.href.includes('tel:') && data.contact.cellLink) {
+          const isOffice = link.textContent.includes('703');
+          link.href = isOffice ? data.contact.officeLink : data.contact.cellLink;
+          link.textContent = isOffice ? data.contact.office : data.contact.cell;
+        }
+        if (link.href.includes('mailto:')) {
+          link.href = data.contact.emailLink;
+          link.textContent = data.contact.email;
+        }
+      });
+
+      // Update addresses
+      const addresses = document.querySelectorAll('address');
+      addresses.forEach(addr => {
+        addr.innerHTML = `${data.address.street}<br />${data.address.city}, ${data.address.state} ${data.address.zip}`;
+      });
+    }
+
+    // Update footer
+    if (data.agent && data.footer) {
+      const logoNames = document.querySelectorAll('.logo__name');
+      const logoTaglines = document.querySelectorAll('.logo__tagline');
+      logoNames.forEach(el => el.textContent = data.agent.name);
+      
+      document.querySelectorAll('.logo__tagline:not(.logo--footer .logo__tagline)').forEach(el => {
+        el.textContent = data.agent.title;
+      });
+      
+      document.querySelectorAll('.logo--footer .logo__tagline').forEach(el => {
+        el.textContent = data.agent.company;
+      });
+
+      const footerTagline = document.querySelector('.footer__tagline');
+      if (footerTagline) footerTagline.textContent = data.agent.slogan;
+
+      const copyright = document.querySelector('.footer__bottom p');
+      if (copyright) copyright.innerHTML = `&copy; ${data.footer.copyright}`;
+
+      const footerLicense = document.querySelector('.footer__license');
+      if (footerLicense) footerLicense.textContent = data.footer.license;
+    }
+  }
+
   // ── Init ───────────────────────────────────────────────────────────
 
   function init() {
+    // Wait for content to be loaded
+    if (!window.SITE_DATA) {
+      window.addEventListener('contentLoaded', init, { once: true });
+      return;
+    }
+
+    // Update all dynamic content
+    updateDynamicContent();
+    
+    // Render content-driven sections
     renderListings();
     renderServices();
     renderBenefits();
     renderTestimonials();
+    
+    // Initialize interactions
     initHeader();
     initMobileNav();
     initSmoothScroll();

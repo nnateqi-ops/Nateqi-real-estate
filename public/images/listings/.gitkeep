@@ -1,0 +1,32 @@
+# Property Photos Folder
+
+This folder contains all property listing photos organized by property address.
+
+## How to Add Photos
+
+1. Create a new folder for your property using the address (lowercase with dashes)
+   Example: `8424-stonewall-rd`
+
+2. Upload your photos to that folder:
+   - `main.jpg` - Main listing photo (required)
+   - `1.jpg`, `2.jpg`, `3.jpg`, etc. - Additional gallery photos
+
+3. Update the listing in `/content/listings/listings.json` with the photo paths
+
+## Photo Guidelines
+
+- Use `.jpg` format
+- Keep file sizes under 2MB for fast loading
+- Use descriptive names: `main.jpg`, `1.jpg`, `2.jpg`, etc.
+- Use lowercase with dashes, no spaces
+- Recommended size: 1200px wide minimum
+
+## Current Listings
+
+Each property has its own folder:
+- 8424-stonewall-rd/
+- 4120-chain-bridge-rd/
+- 7812-maple-lawn-blvd/
+- 1520-wilson-blvd/
+- 3205-tournament-dr/
+- 9400-darnestown-rd/

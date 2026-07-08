@@ -1,0 +1,109 @@
+[
+  {
+    "id": "8424-stonewall-rd",
+    "status": "active",
+    "featured": true,
+    "title": "Beautiful Colonial-Style Home",
+    "address": "8424 Stonewall Rd, Manassas, VA",
+    "price": "$725,000",
+    "beds": 4,
+    "baths": 3,
+    "sqft": "2,840",
+    "description": "Colonial-style home with front porch in Northern Virginia",
+    "mainImage": "/public/images/listings/8424-stonewall-rd/main.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    "gallery": [
+      "/public/images/listings/8424-stonewall-rd/1.jpg",
+      "/public/images/listings/8424-stonewall-rd/2.jpg",
+      "/public/images/listings/8424-stonewall-rd/3.jpg"
+    ]
+  },
+  {
+    "id": "4120-chain-bridge-rd",
+    "status": "active",
+    "featured": true,
+    "title": "Modern Townhouse in Fairfax",
+    "address": "4120 Chain Bridge Rd, Fairfax, VA",
+    "price": "$549,000",
+    "beds": 3,
+    "baths": 2,
+    "sqft": "1,920",
+    "description": "Bright living room in a Fairfax County townhouse",
+    "mainImage": "/public/images/listings/4120-chain-bridge-rd/main.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    "gallery": [
+      "/public/images/listings/4120-chain-bridge-rd/1.jpg",
+      "/public/images/listings/4120-chain-bridge-rd/2.jpg"
+    ]
+  },
+  {
+    "id": "7812-maple-lawn-blvd",
+    "status": "active",
+    "featured": true,
+    "title": "Updated Single-Family Home in Maryland",
+    "address": "7812 Maple Lawn Blvd, Fulton, MD",
+    "price": "$615,000",
+    "beds": 4,
+    "baths": 3,
+    "sqft": "2,450",
+    "description": "Updated kitchen in a Maryland single-family home",
+    "mainImage": "/public/images/listings/7812-maple-lawn-blvd/main.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1600566753190-17f0baa42a6e?w=800&q=80",
+    "gallery": [
+      "/public/images/listings/7812-maple-lawn-blvd/1.jpg",
+      "/public/images/listings/7812-maple-lawn-blvd/2.jpg"
+    ]
+  },
+  {
+    "id": "1520-wilson-blvd",
+    "status": "active",
+    "featured": true,
+    "title": "Luxury Townhouse in Arlington",
+    "address": "1520 Wilson Blvd, Arlington, VA",
+    "price": "$895,000",
+    "beds": 3,
+    "baths": 3,
+    "sqft": "2,100",
+    "description": "Modern townhouse in Arlington",
+    "mainImage": "/public/images/listings/1520-wilson-blvd/main.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1600047509807-ba8f84d8fedf?w=800&q=80",
+    "gallery": [
+      "/public/images/listings/1520-wilson-blvd/1.jpg"
+    ]
+  },
+  {
+    "id": "3205-tournament-dr",
+    "status": "pending",
+    "featured": false,
+    "title": "Family Home with Beautiful Yard",
+    "address": "3205 Tournament Dr, Woodbridge, VA",
+    "price": "$489,000",
+    "beds": 3,
+    "baths": 2,
+    "sqft": "1,780",
+    "description": "Single-family home with landscaped yard in Prince William County",
+    "mainImage": "/public/images/listings/3205-tournament-dr/main.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80",
+    "gallery": []
+  },
+  {
+    "id": "9400-darnestown-rd",
+    "status": "active",
+    "featured": true,
+    "title": "Luxury Estate in Montgomery County",
+    "address": "9400 Darnestown Rd, Gaithersburg, MD",
+    "price": "$1,150,000",
+    "beds": 5,
+    "baths": 4,
+    "sqft": "4,200",
+    "description": "Estate home in Montgomery County, Maryland",
+    "mainImage": "/public/images/listings/9400-darnestown-rd/main.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
+    "gallery": [
+      "/public/images/listings/9400-darnestown-rd/1.jpg",
+      "/public/images/listings/9400-darnestown-rd/2.jpg",
+      "/public/images/listings/9400-darnestown-rd/3.jpg",
+      "/public/images/listings/9400-darnestown-rd/4.jpg"
+    ]
+  }
+]

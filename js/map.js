@@ -34,12 +34,19 @@
 
   function initOfficeMap() {
     const container = document.getElementById('officeMap');
+    
+    // Wait for content to be loaded
+    if (!window.SITE_DATA) {
+      window.addEventListener('contentLoaded', initOfficeMap, { once: true });
+      return;
+    }
+
     const agent = window.SITE_DATA?.agent;
-    const office = agent?.address;
+    const office = window.SITE_DATA?.address;
 
     if (!container || !office?.lat || !office?.lng || typeof L === 'undefined') return;
 
-    const fullAddress = `${office.street}, ${office.city}, ${office.state} ${office.zip}`;
+    const fullAddress = office.fullAddress || `${office.street}, ${office.city}, ${office.state} ${office.zip}`;
     const map = createMap(container);
 
     L.marker([office.lat, office.lng])

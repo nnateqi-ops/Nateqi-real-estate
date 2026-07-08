@@ -1,0 +1,36 @@
+{
+  "agent": {
+    "name": "Najiba Nateqi",
+    "title": "Licensed REALTOR®",
+    "company": "Millennium Realty Group, Inc.",
+    "license": "Licensed in Maryland & Virginia",
+    "slogan": "Providing Professional Real Estate Services with Integrity, Commitment & Results.",
+    "photo": "assets/najiba-nateqi.png"
+  },
+  "contact": {
+    "cell": "(202) 975-5981",
+    "cellLink": "tel:+12029755981",
+    "office": "(703) 675-7985",
+    "officeLink": "tel:+17036757985",
+    "email": "nnateqi@gmail.com",
+    "emailLink": "mailto:nnateqi@gmail.com"
+  },
+  "address": {
+    "street": "8569 Sudley Road, Suite C",
+    "city": "Manassas",
+    "state": "VA",
+    "zip": "20110",
+    "fullAddress": "8569 Sudley Road, Suite C, Manassas, VA 20110",
+    "lat": 38.7947,
+    "lng": -77.5203
+  },
+  "social": {
+    "instagram": "#",
+    "linkedin": "#",
+    "facebook": "#"
+  },
+  "footer": {
+    "copyright": "2026 Najiba Nateqi. All rights reserved.",
+    "license": "Licensed REALTOR® — Maryland & Virginia"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "eyebrow": "Your Trusted Real Estate Partner",
+    "title": "Helping You Buy, Sell, and Invest With Confidence",
+    "subtitle": "Personalized guidance, deep local expertise, and a seamless experience from first showing to final closing — tailored to your goals.",
+    "primaryButton": {
+      "text": "View Listings",
+      "link": "#listings"
+    },
+    "secondaryButton": {
+      "text": "Contact Me",
+      "link": "#contact"
+    },
+    "image": {
+      "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80",
+      "alt": "Luxury modern home with pool and landscaped grounds"
+    },
+    "badge": {
+      "label": "Licensed REALTOR®",
+      "value": "Maryland & Virginia"
+    },
+    "stats": [
+      {
+        "number": "15+",
+        "label": "Years Experience"
+      },
+      {
+        "number": "320+",
+        "label": "Homes Sold"
+      },
+      {
+        "number": "98%",
+        "label": "Client Satisfaction"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About Me",
+    "title": "Dedicated to Your Real Estate Success",
+    "lead": "I'm Najiba Nateqi, a Licensed REALTOR® with Millennium Realty Group, Inc., proudly serving buyers and sellers throughout Maryland and Virginia.",
+    "description": "My approach is simple: listen first, strategize second, and execute with precision. Whether you're purchasing your first home, selling a cherished property, or building an investment portfolio, I bring deep local market knowledge, sharp negotiation skills, and a client-first mindset to every transaction.",
+    "image": {
+      "url": "assets/najiba-nateqi.png",
+      "alt": "Najiba Nateqi, Licensed REALTOR®"
+    },
+    "highlights": [
+      "Licensed in Maryland & Virginia",
+      "Deep knowledge of Northern Virginia and Maryland markets",
+      "Proven track record in competitive offer situations",
+      "Professional service from consultation through closing"
+    ],
+    "accentCard": {
+      "number": "MRG",
+      "label": "Millennium Realty Group, Inc."
+    },
+    "button": {
+      "text": "Let's Connect",
+      "link": "#contact"
+    }
+  },
+  "listingsSection": {
+    "eyebrow": "Featured Properties",
+    "title": "Curated Listings",
+    "subtitle": "A selection of exceptional homes currently available. Contact me for private showings and off-market opportunities.",
+    "button": {
+      "text": "Request Full Portfolio",
+      "link": "#contact"
+    }
+  },
+  "services": [
+    {
+      "icon": "home",
+      "title": "Buying a Home",
+      "description": "Personalized search, expert negotiation, and guidance through every step of your purchase."
+    },
+    {
+      "icon": "tag",
+      "title": "Selling a Home",
+      "description": "Strategic pricing, professional staging advice, and targeted marketing to maximize your return."
+    },
+    {
+      "icon": "chart",
+      "title": "Investment Properties",
+      "description": "Data-driven insights to help you build and grow a profitable real estate portfolio."
+    },
+    {
+      "icon": "search",
+      "title": "Market Analysis",
+      "description": "Comprehensive CMA reports and neighborhood trends to inform your decisions."
+    },
+    {
+      "icon": "map",
+      "title": "Relocation Help",
+      "description": "Seamless transitions for clients moving locally or from out of state."
+    },
+    {
+      "icon": "star",
+      "title": "Luxury Listings",
+      "description": "Discreet, high-touch representation for exceptional properties and discerning clients."
+    }
+  ],
+  "servicesSection": {
+    "eyebrow": "How I Can Help",
+    "title": "Comprehensive Real Estate Services",
+    "subtitle": "Tailored support at every stage of your real estate journey."
+  },
+  "whySection": {
+    "eyebrow": "Why Work With Me",
+    "title": "The Difference Is in the Details",
+    "subtitle": "Real estate is one of life's biggest decisions. You deserve an agent who treats it that way — with expertise, integrity, and unwavering commitment to your best outcome."
+  },
+  "benefits": [
+    {
+      "title": "Local Market Knowledge",
+      "description": "Intimate understanding of neighborhoods, pricing trends, and off-market opportunities."
+    },
+    {
+      "title": "Strong Negotiation",
+      "description": "A proven record of securing favorable terms in competitive markets."
+    },
+    {
+      "title": "Smooth Process",
+      "description": "Meticulous coordination from offer to closing so nothing falls through the cracks."
+    },
+    {
+      "title": "Clear Communication",
+      "description": "Timely updates and honest guidance — you'll always know where things stand."
+    },
+    {
+      "title": "Modern Marketing",
+      "description": "Professional photography, digital campaigns, and premium listing presentations."
+    },
+    {
+      "title": "Trusted Guidance",
+      "description": "Your advocate at every stage, focused entirely on protecting your interests."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Michael & Sarah Chen",
+      "quote": "Najiba made our home search effortless. Her knowledge of the market and calm professionalism gave us complete confidence from day one.",
+      "rating": 5
+    },
+    {
+      "name": "David Rodriguez",
+      "quote": "We sold above asking in under two weeks. Her marketing strategy and negotiation skills are truly world-class.",
+      "rating": 5
+    },
+    {
+      "name": "Jennifer Walsh",
+      "quote": "As a first-time buyer, I felt supported every step of the way. Najiba explained everything clearly and fought hard for us.",
+      "rating": 5
+    }
+  ],
+  "testimonialsSection": {
+    "eyebrow": "Client Stories",
+    "title": "What My Clients Say"
+  },
+  "contactSection": {
+    "eyebrow": "Get in Touch",
+    "title": "Start Your Journey Today",
+    "text": "Whether you're ready to move or simply exploring your options, I'd love to hear from you. Fill out the form and I'll respond within one business day."
+  }
+}
