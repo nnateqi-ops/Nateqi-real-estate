@@ -1,0 +1,12 @@
+{
+  "name": "real-estate-website",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "serve . -p 5173",
+    "start": "serve . -p 5173"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

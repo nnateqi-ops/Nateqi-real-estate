@@ -71,10 +71,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.nav-open {
-  overflow: hidden;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -344,40 +340,6 @@ address {
 .nav__link:hover::after,
 .nav__link--active::after {
   width: 100%;
-}
-
-/* Mobile toggle */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 28px;
-  height: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.nav-toggle span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-charcoal);
-  transition: transform var(--transition), opacity var(--transition);
-}
-
-.nav-toggle--active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.nav-toggle--active span:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-toggle--active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ── Hero ──────────────────────────────────────────────────────────────── */
@@ -1185,46 +1147,8 @@ address {
     --space-2xl: 4rem;
   }
 
-  .nav-toggle {
-    display: flex;
-  }
-
   .nav {
-    position: fixed;
-    inset: 0;
-    top: var(--header-height);
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: var(--space-lg) var(--space-md);
-    background: var(--color-bg);
-    gap: var(--space-md);
-    transform: translateX(100%);
-    transition: transform var(--transition);
-    overflow-y: auto;
-  }
-
-  .nav--open {
-    transform: translateX(0);
-  }
-
-  .nav__list {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 0;
-  }
-
-  .nav__link {
-    display: block;
-    width: 100%;
-    padding: var(--space-sm) 0;
-    font-size: 1.125rem;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .nav__cta {
-    width: 100%;
-    margin-top: var(--space-sm);
+    display: none;
   }
 
   .stats {

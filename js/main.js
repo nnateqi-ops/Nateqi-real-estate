@@ -11,9 +11,9 @@
     const grid = document.getElementById('listingsGrid');
     if (!grid || !window.SITE_DATA) return;
 
-    // Filter only active and pending listings (if status field exists)
+    // Filter active, pending, and sold listings (if status field exists)
     const activeListings = SITE_DATA.listings.filter(
-      listing => !listing.status || listing.status === 'active' || listing.status === 'pending'
+      listing => !listing.status || listing.status === 'active' || listing.status === 'pending' || listing.status === 'sold'
     );
 
     grid.innerHTML = activeListings
@@ -22,8 +22,10 @@
           // Support both old (image) and new (mainImage/fallbackImage) formats
           const imageUrl = listing.image || listing.fallbackImage || listing.mainImage;
           const altText = listing.alt || listing.description;
-          const statusBadge = listing.status === 'pending' 
-            ? '<span class="listing-card__status">Pending</span>' 
+          const statusBadge = listing.status === 'pending'
+            ? '<span class="listing-card__status">Pending</span>'
+            : listing.status === 'sold'
+            ? '<span class="listing-card__status">Sold</span>'
             : '';
           
           return `
@@ -138,30 +140,6 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-  }
-
-  // ── Mobile navigation ──────────────────────────────────────────────
-
-  function initMobileNav() {
-    const toggle = document.getElementById('navToggle');
-    const nav = document.getElementById('nav');
-    if (!toggle || !nav) return;
-
-    toggle.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('nav--open');
-      toggle.classList.toggle('nav-toggle--active', isOpen);
-      toggle.setAttribute('aria-expanded', String(isOpen));
-      document.body.classList.toggle('nav-open', isOpen);
-    });
-
-    nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('nav--open');
-        toggle.classList.remove('nav-toggle--active');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('nav-open');
-      });
-    });
   }
 
   // ── Smooth scroll & active nav link ────────────────────────────────
@@ -432,7 +410,6 @@
     
     // Initialize interactions
     initHeader();
-    initMobileNav();
     initSmoothScroll();
     initForm();
 
