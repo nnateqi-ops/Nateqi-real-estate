@@ -26,7 +26,7 @@ window.SITE_DATA = {
   listings: [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+      image: 'assets/listings/cedar-crest-way.jpg',
       alt: 'Beautiful home in Upper Marlboro, Maryland',
       price: '$625,000',
       address: '9606 Cedar Crest Way, Upper Marlboro, MD',
@@ -36,7 +36,7 @@ window.SITE_DATA = {
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      image: 'assets/listings/academy-st.jpg',
       alt: 'Charming property in Greensboro, Maryland',
       price: '$385,000',
       address: '108 N Academy St, Greensboro, MD',
