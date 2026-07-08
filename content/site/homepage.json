@@ -18,21 +18,7 @@
     "badge": {
       "label": "Licensed REALTOR®",
       "value": "Maryland & Virginia"
-    },
-    "stats": [
-      {
-        "number": "15+",
-        "label": "Years Experience"
-      },
-      {
-        "number": "320+",
-        "label": "Homes Sold"
-      },
-      {
-        "number": "98%",
-        "label": "Client Satisfaction"
-      }
-    ]
+    }
   },
   "about": {
     "eyebrow": "About Me",
