@@ -11,16 +11,17 @@
     const grid = document.getElementById('listingsGrid');
     if (!grid || !window.SITE_DATA) return;
 
-    // Filter only active and pending listings
+    // Filter only active and pending listings (if status field exists)
     const activeListings = SITE_DATA.listings.filter(
-      listing => listing.status === 'active' || listing.status === 'pending'
+      listing => !listing.status || listing.status === 'active' || listing.status === 'pending'
     );
 
     grid.innerHTML = activeListings
       .map(
         (listing) => {
-          // Use fallbackImage if mainImage doesn't exist or fails to load
-          const imageUrl = listing.fallbackImage || listing.mainImage;
+          // Support both old (image) and new (mainImage/fallbackImage) formats
+          const imageUrl = listing.image || listing.fallbackImage || listing.mainImage;
+          const altText = listing.alt || listing.description;
           const statusBadge = listing.status === 'pending' 
             ? '<span class="listing-card__status">Pending</span>' 
             : '';
@@ -30,10 +31,9 @@
           <div class="listing-card__image-wrap">
             <img 
               src="${imageUrl}" 
-              alt="${listing.description}" 
+              alt="${altText}" 
               class="listing-card__image" 
               loading="lazy"
-              onerror="this.src='${listing.fallbackImage}'"
             />
             <span class="listing-card__price">${listing.price}</span>
             ${statusBadge}
@@ -421,12 +421,6 @@
   // ── Init ───────────────────────────────────────────────────────────
 
   function init() {
-    // Wait for content to be loaded
-    if (!window.SITE_DATA) {
-      window.addEventListener('contentLoaded', init, { once: true });
-      return;
-    }
-
     // Update all dynamic content
     updateDynamicContent();
     
