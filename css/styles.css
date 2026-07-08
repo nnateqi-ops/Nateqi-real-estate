@@ -819,6 +819,13 @@ address {
   gap: var(--space-md);
 }
 
+/* Enhanced styling for single testimonial */
+.testimonials__grid:has(.testimonial-card:only-child) {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
 .testimonial-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -827,10 +834,23 @@ address {
   margin: 0;
 }
 
+/* Larger styling when it's the only testimonial */
+.testimonials__grid .testimonial-card:only-child {
+  padding: var(--space-xl) var(--space-lg);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 .testimonial-card__stars {
   display: flex;
   gap: 2px;
   margin-bottom: var(--space-md);
+}
+
+/* Larger stars for single testimonial */
+.testimonials__grid .testimonial-card:only-child .testimonial-card__stars {
+  gap: 4px;
+  margin-bottom: var(--space-lg);
 }
 
 .star {
@@ -839,6 +859,11 @@ address {
 
 .star--filled {
   color: var(--color-accent);
+}
+
+/* Larger star size for single testimonial */
+.testimonials__grid .testimonial-card:only-child .star {
+  font-size: 1.25rem;
 }
 
 .testimonial-card__quote {
@@ -850,11 +875,22 @@ address {
   margin-bottom: var(--space-md);
 }
 
+/* Larger quote text for single testimonial */
+.testimonials__grid .testimonial-card:only-child .testimonial-card__quote {
+  font-size: 1.375rem;
+  line-height: 1.7;
+}
+
 .testimonial-card__author {
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--color-accent);
+}
+
+/* Larger author text for single testimonial */
+.testimonials__grid .testimonial-card:only-child .testimonial-card__author {
+  font-size: 0.9375rem;
 }
 
 /* ── Contact ───────────────────────────────────────────────────────────── */
