@@ -11,9 +11,9 @@
   --color-bg-alt: #f3f1ed;
   --color-bg-dark: #1a2332;
   --color-surface: #ffffff;
-  --color-text: #1c1c1c;
-  --color-text-muted: #5c5c5c;
-  --color-text-light: #a8b0bc;
+  --color-text: #141414;
+  --color-text-muted: #3a3a3a;
+  --color-text-light: #c5ccd6;
   --color-border: #e5e2dc;
   --color-accent: #b8956a;
   --color-accent-dark: #9a7a52;
@@ -63,8 +63,9 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.7;
   color: var(--color-text);
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
@@ -116,8 +117,8 @@ address {
 
 .eyebrow {
   font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -130,8 +131,8 @@ address {
 
 .section__title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 500;
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  font-weight: 700;
   line-height: 1.15;
   color: var(--color-charcoal);
   margin-bottom: var(--space-sm);
@@ -142,9 +143,10 @@ address {
 }
 
 .section__subtitle {
-  font-size: 1.0625rem;
+  font-size: 1.1875rem;
+  font-weight: 500;
   color: var(--color-text-muted);
-  max-width: 560px;
+  max-width: 600px;
   line-height: 1.7;
 }
 
@@ -177,8 +179,8 @@ address {
   justify-content: center;
   gap: 0.5rem;
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 0.04em;
   padding: 0.875rem 1.75rem;
   border-radius: var(--radius-sm);
@@ -224,10 +226,10 @@ address {
   border: none;
   padding: 0;
   color: var(--color-accent-dark);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
 }
 
 .btn--text:hover {
@@ -237,7 +239,7 @@ address {
 
 .btn--sm {
   padding: 0.625rem 1.25rem;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
 }
 
 .btn--full {
@@ -280,16 +282,16 @@ address {
 
 .logo__name {
   font-family: var(--font-display);
-  font-size: 1.375rem;
-  font-weight: 600;
+  font-size: 1.625rem;
+  font-weight: 700;
   color: var(--color-charcoal);
   letter-spacing: 0.02em;
   line-height: 1.2;
 }
 
 .logo__tagline {
-  font-size: 0.625rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -313,8 +315,8 @@ address {
 }
 
 .nav__link {
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--color-text-muted);
   padding: 0.25rem 0;
   position: relative;
@@ -361,17 +363,18 @@ address {
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
-  font-weight: 500;
+  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+  font-weight: 700;
   line-height: 1.1;
   color: var(--color-charcoal);
   margin-bottom: var(--space-md);
 }
 
 .hero__text {
-  font-size: 1.0625rem;
+  font-size: 1.1875rem;
+  font-weight: 500;
   color: var(--color-text-muted);
-  max-width: 480px;
+  max-width: 520px;
   margin-bottom: var(--space-lg);
   line-height: 1.75;
 }
@@ -414,8 +417,8 @@ address {
 }
 
 .hero__badge-label {
-  font-size: 0.6875rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-muted);
@@ -423,8 +426,8 @@ address {
 
 .hero__badge-value {
   font-family: var(--font-display);
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--color-charcoal);
 }
 
@@ -445,14 +448,15 @@ address {
 
 .stat__number {
   font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--color-charcoal);
   line-height: 1;
 }
 
 .stat__label {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--color-text-muted);
   letter-spacing: 0.02em;
 }
@@ -505,25 +509,29 @@ address {
 
 .about__accent-number {
   font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--color-accent);
 }
 
 .about__accent-label {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--color-text-light);
   letter-spacing: 0.04em;
 }
 
 .about__lead {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   color: var(--color-charcoal);
   margin-bottom: var(--space-sm);
   line-height: 1.7;
 }
 
 .about__text {
+  font-size: 1.0625rem;
+  font-weight: 500;
   color: var(--color-text-muted);
   margin-bottom: var(--space-md);
 }
@@ -537,7 +545,8 @@ address {
   padding-left: 1.5rem;
   margin-bottom: var(--space-xs);
   color: var(--color-text-muted);
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
 }
 
 .about__highlights li::before {
@@ -582,13 +591,15 @@ address {
 .map-info__title {
   display: block;
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--color-charcoal);
   margin-bottom: 0.25rem;
 }
 
 .map-info__address {
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
   color: var(--color-text-muted);
 }
 
@@ -635,8 +646,8 @@ address {
   background: rgba(26, 35, 50, 0.88);
   color: #ffffff;
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.375rem;
+  font-weight: 700;
   padding: 0.375rem 0.875rem;
   border-radius: var(--radius-sm);
 }
@@ -648,8 +659,8 @@ address {
   background: var(--color-accent);
   color: #ffffff;
   font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 0.375rem 0.75rem;
@@ -661,8 +672,8 @@ address {
 }
 
 .listing-card__address {
-  font-size: 0.9375rem;
-  font-weight: 500;
+  font-size: 1.0625rem;
+  font-weight: 600;
   color: var(--color-charcoal);
   margin-bottom: var(--space-xs);
   line-height: 1.4;
@@ -677,7 +688,8 @@ address {
 }
 
 .listing-card__meta li {
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
   color: var(--color-text-muted);
   display: flex;
   align-items: center;
@@ -725,14 +737,15 @@ address {
 
 .service-card__title {
   font-family: var(--font-display);
-  font-size: 1.375rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--color-charcoal);
   margin-bottom: var(--space-xs);
 }
 
 .service-card__text {
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
   color: var(--color-text-muted);
   line-height: 1.65;
 }
@@ -776,14 +789,15 @@ address {
 
 .benefit-card__title {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.375rem;
+  font-weight: 700;
   color: var(--color-charcoal);
   margin-bottom: var(--space-xs);
 }
 
 .benefit-card__text {
-  font-size: 0.875rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
   color: var(--color-text-muted);
   line-height: 1.65;
 }
@@ -845,29 +859,30 @@ address {
 
 .testimonial-card__quote {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  font-weight: 500;
   font-style: italic;
   line-height: 1.65;
-  color: #d8dce2;
+  color: #e8eaed;
   margin-bottom: var(--space-md);
 }
 
 /* Larger quote text for single testimonial */
 .testimonials__grid .testimonial-card:only-child .testimonial-card__quote {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   line-height: 1.7;
 }
 
 .testimonial-card__author {
-  font-size: 0.8125rem;
-  font-weight: 500;
+  font-size: 0.9375rem;
+  font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--color-accent);
 }
 
 /* Larger author text for single testimonial */
 .testimonials__grid .testimonial-card:only-child .testimonial-card__author {
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
 }
 
 /* ── Contact ───────────────────────────────────────────────────────────── */
@@ -880,6 +895,8 @@ address {
 }
 
 .contact__text {
+  font-size: 1.125rem;
+  font-weight: 500;
   color: var(--color-text-muted);
   margin-bottom: var(--space-lg);
   line-height: 1.75;
@@ -891,8 +908,8 @@ address {
 
 .contact__detail-label {
   display: block;
-  font-size: 0.6875rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -900,6 +917,8 @@ address {
 }
 
 .contact__details a {
+  font-size: 1.0625rem;
+  font-weight: 600;
   color: var(--color-charcoal);
   transition: color var(--transition);
 }
@@ -910,7 +929,8 @@ address {
 
 .contact__details address {
   color: var(--color-text-muted);
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
   line-height: 1.6;
 }
 
@@ -935,8 +955,8 @@ address {
 
 .form__group label {
   display: block;
-  font-size: 0.8125rem;
-  font-weight: 500;
+  font-size: 0.9375rem;
+  font-weight: 600;
   color: var(--color-charcoal);
   margin-bottom: 0.375rem;
 }
@@ -950,7 +970,8 @@ address {
 .form__group textarea {
   width: 100%;
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
   color: var(--color-text);
   background: var(--color-bg);
   border: 1.5px solid var(--color-border);
@@ -1021,17 +1042,18 @@ address {
 }
 
 .footer__tagline {
-  font-size: 0.875rem;
+  font-size: 1rem;
+  font-weight: 500;
   line-height: 1.7;
   margin-top: var(--space-sm);
-  color: #8a939f;
+  color: #b0b8c2;
   max-width: 280px;
 }
 
 .footer__heading {
   font-family: var(--font-display);
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #ffffff;
   margin-bottom: var(--space-md);
 }
@@ -1041,8 +1063,9 @@ address {
 }
 
 .footer__links a {
-  font-size: 0.875rem;
-  color: #8a939f;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b0b8c2;
   transition: color var(--transition);
 }
 
@@ -1051,8 +1074,9 @@ address {
 }
 
 .footer__social a {
-  font-size: 0.875rem;
-  color: #8a939f;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b0b8c2;
   transition: color var(--transition);
 }
 
@@ -1069,8 +1093,9 @@ address {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8125rem;
-  color: #6b7580;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #8a939f;
 }
 
 .footer__license {
