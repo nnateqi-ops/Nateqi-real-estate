@@ -226,6 +226,9 @@
         </div>
 
         <form class="contact__form reveal" id="contactForm" novalidate>
+          <!-- Honeypot — leave empty; bots that fill it are ignored -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="form__honeypot" aria-hidden="true" />
+
           <div class="form__row">
             <div class="form__group">
               <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
@@ -274,8 +277,9 @@
             </div>
           </div>
 
-          <button type="submit" class="btn btn--primary btn--full">Send Inquiry</button>
+          <button type="submit" class="btn btn--primary btn--full" id="formSubmitBtn">Send Inquiry</button>
           <p class="form__success" id="formSuccess" hidden>Thank you! Your message has been received. I'll be in touch shortly.</p>
+          <p class="form__submit-error" id="formSubmitError" hidden role="alert"></p>
         </form>
       </div>
     </section>

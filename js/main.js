@@ -256,11 +256,17 @@
       });
     });
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const success = document.getElementById('formSuccess');
+      const submitError = document.getElementById('formSubmitError');
+      const submitBtn = document.getElementById('formSubmitBtn');
       if (success) success.hidden = true;
+      if (submitError) {
+        submitError.hidden = true;
+        submitError.textContent = '';
+      }
 
       const allValid = Object.keys(fields).every((key) => validateField(key));
       if (!allValid) {
@@ -269,12 +275,68 @@
         return;
       }
 
-      // Demo: show success message (wire to backend later)
-      if (success) {
-        success.hidden = false;
-        form.reset();
-        Object.values(fields).forEach((f) => showError(f, ''));
-        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      // Ignore honeypot spam fills
+      const honeypot = form.querySelector('[name="_gotcha"]');
+      if (honeypot && honeypot.value) return;
+
+      const recipient =
+        (window.SITE_DATA && window.SITE_DATA.agent && window.SITE_DATA.agent.email) ||
+        'nnateqi@gmail.com';
+
+      const payload = {
+        name: fields.fullName.el.value.trim(),
+        email: fields.email.el.value.trim(),
+        phone: fields.phone.el.value.trim(),
+        interest: fields.interest.el.value,
+        budget: (document.getElementById('budget') || {}).value || '',
+        message: fields.message.el.value.trim(),
+        _replyto: fields.email.el.value.trim(),
+        _subject: `New website inquiry from ${fields.fullName.el.value.trim()}`,
+        _template: 'table',
+      };
+
+      const originalLabel = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      try {
+        const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await response.json().catch(() => ({}));
+        const ok = response.ok && data.success !== 'false' && data.success !== false;
+
+        if (!ok) {
+          throw new Error(data.message || 'Unable to send your message. Please try again or email directly.');
+        }
+
+        if (success) {
+          success.hidden = false;
+          form.reset();
+          Object.values(fields).forEach((f) => showError(f, ''));
+          success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      } catch (err) {
+        if (submitError) {
+          submitError.hidden = false;
+          submitError.textContent =
+            err.message ||
+            `Something went wrong. Please email ${recipient} directly.`;
+          submitError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalLabel || 'Send Inquiry';
+        }
       }
     });
   }
